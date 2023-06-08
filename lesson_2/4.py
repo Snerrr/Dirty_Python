@@ -5,14 +5,9 @@
 # Fn = Fn–2 + Fn–1
 
 chislo = int(input("Введите число: "))
-my_list = []
-for i in range(0, chislo + 1):
-    if i == 0:
-        my_list.append(i)
-    elif i == 1:
-        my_list.append(i)
-    else:
-        my_list.append(my_list[i - 2] + my_list[i - 1])
+my_list = [0, 1]
+for i in range(2, chislo + 1):
+    my_list.append(my_list[i - 2] + my_list[i - 1])
 my_list1 = my_list[1:].copy()
 for i in range(1, chislo, 2):
     my_list1[i] *= -1
